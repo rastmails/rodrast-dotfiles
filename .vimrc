@@ -76,7 +76,7 @@ map <c-h> <c-w>h
 "Easier moving between tabs
 " ======================================================================================
 "     Note to myself:
-"                     find other key this is note usefull even thoug with tmux not used.
+"                     find other key this is not useful even thoug with tmux not used.
 " ======================================================================================
 "map <Leader>n <esc>:tabprevious<CR>
 "map <Leader>m <esc>:tabnext<CR>
