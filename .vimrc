@@ -1,5 +1,5 @@
 ".vimrc file by Rodrigo Alvarez Echarri
-" January 2013
+" January 2014
 " Slides: TODO
 
 " ================================================
