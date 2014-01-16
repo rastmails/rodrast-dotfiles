@@ -86,8 +86,8 @@ map <c-h> <c-w>h
 vnoremap <Leader>s :sort<CR>
 
 "Easier moving of code block
-vnoremap < <gv  "better indentacion
-inoremap < <gv  "better indentacion
+""vnoremap < <gv  "better indentacion
+""inoremap < <gv  "better indentacion
 
 "Showing line numbers and lenght
 set number "show line numbers
@@ -142,6 +142,21 @@ call pathogen#infect()
 " cd ~/.vim/bundle
 " git clone https://github.com/kien/ctrlp.vim.git
 let g:ctrlp_max_height = 30
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=*/coverage/*
 
+"Settings for Python-mode
+" cd ~/.vim/bundle
+" git clone https://github.com/kien/python-mode
+map <Leader>g :call RopeGotoDefinition()<CR>
+let ropevim_enable_shortcuts = 1
+let g:pymode_rope_goto_def_newwin = "vnew"
+let g:pymode_rope_extended_complete = 1
+let g:pymode_breakpoint = 0
+let g:pymode_syntax = 1
+let g:pymode_syntax_builtin_objs = 0
+let g:pymode_syntax_builtin_funcs = 0
+map <Leader>b Oimport ipdb; ipdb.set_trace() #BREAKPOINT<C-c>
 
 
