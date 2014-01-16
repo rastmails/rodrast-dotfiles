@@ -119,3 +119,12 @@ set smartcase
 set nobackup
 set nowritebackup
 set noswapfile
+
+"Setup Pathogen to manage your plugins
+"mkdir -p ~/.vim/autoload ~/.vim/bundle
+"curl -so ~/.vim/autoload/pathogen.vim
+"https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
+"Now you can install any plugin into a .vim/bundle/plugin-name
+call pathogen#infect()
+
+
