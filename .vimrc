@@ -148,7 +148,7 @@ set wildignore+=*/coverage/*
 
 "Settings for Python-mode
 " cd ~/.vim/bundle
-" git clone https://github.com/kien/python-mode
+" git clone https://github.com/klen/python-mode
 map <Leader>g :call RopeGotoDefinition()<CR>
 let ropevim_enable_shortcuts = 1
 let g:pymode_rope_goto_def_newwin = "vnew"
@@ -160,3 +160,24 @@ let g:pymode_syntax_builtin_funcs = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() #BREAKPOINT<C-c>
 
 
+"Better navigation through omnicomplete option list
+"See http://stackoverflow.com/questions/2170023/how-to-map-keys-for
+set completeopt=longest,menuone
+function! OmniPopup(action)
+    if pumvisible()
+        if a:action == 'j'
+            return "\<C-N>"
+        elseif a:action == 'k'
+            return "\<C-P>"
+        endif
+    endif
+    return a:action
+endfunction
+
+inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
+inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
+
+"Python folding
+"mkdir -p ~/.vim/ftplugin
+"wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scri
+""set nofodable
